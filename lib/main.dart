@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'services/qr_service.dart';
 import 'screens/scanner_screen.dart';
 import 'screens/historial_screen.dart';
+import 'screens/generar_qr_screen.dart';
 
 void main() {
   runApp(const QRScanApp());
@@ -41,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final paginas = [
       ScannerScreen(service: _service),
       HistorialScreen(service: _service),
+      const GenerarQRScreen(),
     ];
 
     return Scaffold(
@@ -62,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Escanear',
           ),
           NavigationDestination(icon: Icon(Icons.history), label: 'Historial'),
+          NavigationDestination(icon: Icon(Icons.add_box), label: 'Generar'),
         ],
       ),
     );
