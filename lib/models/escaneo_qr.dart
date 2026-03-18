@@ -22,7 +22,7 @@ class EscaneoQR {
   }
 
   // Métodos para persistencia
-  Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() => { 
         'contenido': contenido,
         'fechaHora': fechaHora.toIso8601String(),
         'tipo': tipo.index,
